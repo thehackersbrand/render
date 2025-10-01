@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-dev-key-only-for-development-123456789'
 
 # Debug is always True for development
-DEBUG = True
+DEBUG = False
 
 # Development allowed hosts
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['hackversity.onrender.com','localhost', '127.0.0.1', '0.0.0.0']
 
 
 # Application definition
@@ -188,6 +188,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 # CORS settings (for API access if needed)
 CORS_ALLOWED_ORIGINS = [
+   "https://hackversity.onrender.com"
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "http://localhost:8000",
