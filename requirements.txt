@@ -1,0 +1,71 @@
+# ==========================================
+# Django GenAI Application - DEVELOPMENT Requirements
+# Python 3.13.5 compatible
+# ==========================================
+
+# Core Django Framework
+Django==4.2.16
+python-dotenv==1.0.1
+
+# Django REST Framework for API functionality
+djangorestframework==3.15.2
+
+# Authentication and User Management
+django-allauth==0.63.6
+
+# HTTP requests for external API calls (Euron API)
+requests==2.31.0
+
+# Core dependencies (automatically installed with Django)
+asgiref==3.9.2
+sqlparse==0.5.2
+tzdata==2025.2
+
+# Development-only dependencies
+# Add any development tools here as needed
+
+# HTTP dependencies (automatically installed with requests)
+charset-normalizer==3.3.2
+idna==3.7
+urllib3==2.3.0
+certifi==2025.8.3
+
+# ==========================================
+# Optional Production Dependencies
+# Uncomment as needed for deployment
+# ==========================================
+
+# Production WSGI server
+ gunicorn==23.0.0
+
+# Static file serving for production
+ whitenoise==6.11.0
+
+# PostgreSQL adapter (if using PostgreSQL instead of SQLite)
+ psycopg2-binary==2.9.10
+
+# Image processing (if handling image uploads)
+ pillow>=11.0.0
+
+# Better form rendering
+ django-crispy-forms==2.4
+
+# Background task processing
+ celery>=5.3.0
+ redis>=6.4.0
+
+# ==========================================
+# Development Dependencies
+# Uncomment for development environment
+# ==========================================
+
+# Debug toolbar for development
+django-debug-toolbar>=4.0.0
+
+# Additional management commands
+ django-extensions>=3.2.0
+
+# Code formatting and linting
+ black>=24.0.0
+ flake8>=7.0.0
+ pylint>=3.0.0
