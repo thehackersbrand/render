@@ -34,8 +34,8 @@ pip install -r requirements.txt
 ```
 
 3. **Configure Euron API Key:**
-   - Open the `.env` file in the root directory
-   - Replace `your-euron-api-key-here` with your actual Euron API key
+   - The Euron API key is already configured in the Django settings
+   - If you need to change it, edit `genai_project/settings.py` and update the `EURON_API_KEY` value
    - Get your API key from: https://api.euron.one
 
 4. **Test Euron API setup:**
@@ -83,16 +83,17 @@ python manage.py runserver
 ├── static/                 # Static files (CSS, JS, Images)
 ├── templates/              # HTML templates
 ├── db.sqlite3             # SQLite database
-├── .env                   # Environment variables
 └── manage.py              # Django management script
 ```
 
-## Environment Variables (.env)
+## Configuration
 
-```env
-SECRET_KEY=django-insecure-dev-key-only-for-development-change-in-production
-DEBUG=True
-EURON_API_KEY=your-euron-api-key-here
+All configuration is now handled directly in Django settings. Key settings are:
+
+```python
+SECRET_KEY = 'django-insecure-dev-key-only-for-development-123456789'
+DEBUG = True
+EURON_API_KEY = 'euri-94dee66c5f9b41981308651c7985cbf1db0ed7307f498e8e70ccc1da7c84c343'
 ALLOWED_HOSTS=localhost,127.0.0.1,0.0.0.0
 EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
 ```

@@ -25,7 +25,7 @@ This is a Django-based generative AI application configured specifically for dev
 ## Development Environment Setup
 1. Create and activate virtual environment: `python -m venv venv && venv\Scripts\activate`
 2. Install dependencies: `pip install -r requirements.txt`
-3. Configure Euron API key in .env file: `EURON_API_KEY=your-api-key`
+3. Euron API key is configured in Django settings.py
 4. Test Euron API setup: `python test_euron_api.py`
 5. Run migrations: `python manage.py migrate`
 6. Create superuser: `python manage.py createsuperuser`

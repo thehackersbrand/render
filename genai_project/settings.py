@@ -12,10 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # Development secret key - DO NOT use in production
-SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-dev-key-only-for-development-123456789')
+SECRET_KEY = 'django-insecure-dev-key-only-for-development-123456789'
 
 # Debug is always True for development
 DEBUG = True
@@ -52,6 +48,9 @@ INSTALLED_APPS = [
     # 'allauth',
     # 'allauth.account',
     # 'allauth.socialaccount',
+    
+    # Development tools
+    'django_extensions',
     
     # Local apps
     'accounts',
@@ -155,7 +154,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # Euron API Configuration
-EURON_API_KEY = os.getenv('EURON_API_KEY')
+EURON_API_KEY = 'euri-94dee66c5f9b41981308651c7985cbf1db0ed7307f498e8e70ccc1da7c84c343'
 
 # Django REST Framework
 REST_FRAMEWORK = {
